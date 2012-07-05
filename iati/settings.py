@@ -10,7 +10,7 @@ sys.path.insert(0, rel('..','lib'))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-from local_settings import ADMINS, DATABASES, SERVER_EMAIL
+from local_settings import ADMINS, DATABASES, SERVER_EMAIL, SECRET_KEY
 ADMINS = ADMINS
 
 MANAGERS = ADMINS
@@ -59,12 +59,12 @@ ADMIN_MEDIA_PREFIX = '/media/admin/'
 STATIC_URL = ''
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '1xrw3xlzdyu_s$qxdr84a6aen&lr$lai59txex$#&b4v5&1*lf'
+SECRET_KEY = SECRET_KEY
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+#    'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
