@@ -10,20 +10,14 @@ sys.path.insert(0, rel('..','lib'))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-   ('***', '***'),
-)
+from local_settings import ADMINS, DATABASES, SERVER_EMAIL
+ADMINS = ADMINS
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': '***',
-        'NAME': '***',
-        'USER': '***',
-        'PASSWORD': '***',
-    }
-}
+DATABASES = DATABASES
+
+SERVER_EMAIL = SERVER_EMAIL
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -90,7 +84,6 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -101,9 +94,3 @@ INSTALLED_APPS = (
     'api',
     'piston',
 )
-
-
-try:
-    from settings_local import *
-except ImportError:
-    pass
