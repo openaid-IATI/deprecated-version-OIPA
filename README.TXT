@@ -1,3 +1,5 @@
+[deprecated version] 
+
 OIPA: OpenAid IATI parser and API version 1.0
 
 **27/6/12:please be advised: use OIPA V2, since OIPA V1 only supports the IATI compliant set for the Dutch Ministry of foreign affairs**
